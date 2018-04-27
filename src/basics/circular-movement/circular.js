@@ -12,8 +12,10 @@ window.addEventListener('DOMContentLoaded', () => {
     let angle = 0;
 
     // Trying to keep actual numbers out of motion code
-    const speed = 0.1;
-    const range = 100;
+    const speed = 0.03;
+
+    // Circle around which our ball will rotate
+    const radius = 100;
 
     ball.x = canvas.width / 2;
     ball.y = canvas.height / 2;
@@ -25,7 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // wave fun when rect is not cleared
         context.clearRect(0, 0, canvas.width, canvas.height);
 
-        ball.y = (canvas.height / 2) + Math.sin(angle) * range;
+        ball.x = (canvas.width / 2) + Math.cos(angle) * radius;
+        ball.y = (canvas.height / 2) + Math.sin(angle) * radius;
         angle += speed;
 
         ball.draw(context);
