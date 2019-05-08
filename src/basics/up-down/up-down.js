@@ -12,7 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let angle = 0;
 
     // Trying to keep actual numbers out of motion code
-    const speed = 0.1;
+    // The speed here is in radians to increment angle
+    const speed = 0.05;
     const range = 100;
 
     ball.x = canvas.width / 2;

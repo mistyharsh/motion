@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         context.clearRect(0, 0, canvas.width, canvas.height);
 
+        // Draw a horizontal reference line
         context.beginPath();
         context.moveTo(0, canvas.height / 2);
         context.lineTo(canvas.width, canvas.height / 2);

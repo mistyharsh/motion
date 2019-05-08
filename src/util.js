@@ -13,11 +13,6 @@ export function $Many(selector) {
 
 export function captureMouse(element) {
 
-    function listener(event) {
-        mouse.x = event.pageX - element.offsetLeft;
-        mouse.y = event.pageY - element.offsetTop;
-    }
-
     const mouse = {
         x: 0,
         y: 0,
@@ -26,6 +21,10 @@ export function captureMouse(element) {
         }
     };
 
+    function listener(event) {
+        mouse.x = event.pageX - element.offsetLeft;
+        mouse.y = event.pageY - element.offsetTop;
+    }
 
     element.addEventListener('mousemove', listener, false);
 
