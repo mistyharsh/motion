@@ -60,8 +60,8 @@ typings/
 # Ignore F# specific stuff
 .ionide
 .fable
-src/obj
+src/Motion/bin
+src/Motion/obj
 
-# Ignore nuxt files
-.nuxt
+# Ignore generated files
 dist
