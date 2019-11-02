@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+# Ignore F# specific stuff
+.ionide
+.fable
+src/obj
+
+# Ignore nuxt files
+.nuxt
+dist

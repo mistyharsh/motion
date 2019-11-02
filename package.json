@@ -1,23 +1,27 @@
 {
-    "name": "motion",
-    "version": "0.0.1",
-    "description": "JavaScript + Canvas Animation",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mistyharsh/motion.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/mistyharsh/motion/issues"
-    },
-    "homepage": "https://github.com/mistyharsh/motion#readme",
-    "devDependencies": {
-        "finalhandler": "^1.1.1",
-        "serve-static": "^1.13.2"
-    }
+  "name": "motion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistyharsh/motion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mistyharsh/motion/issues"
+  },
+  "homepage": "https://github.com/mistyharsh/motion#readme",
+  "dependencies": {
+    "nuxt": "^2.10.2"
+  },
+  "devDependencies": {
+    "fable-compiler": "^2.4.9",
+    "fable-loader": "^2.1.8"
+  }
 }
