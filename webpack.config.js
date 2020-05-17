@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -21,11 +21,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.svelte$/,
-        exclude: /node_modules/,
-        use: 'svelte-loader'
-      },
-      {
         test: /\.fs(x|proj)?$/,
         use: 'fable-loader'
       }
@@ -34,20 +29,13 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Motion with F#',
-
+      title: 'Motion with F#'
     })
   ],
 
   resolve: {
-    // ensures that only one copy of svelte included in the application
-    alias: {
-      svelte: path.resolve('node_modules', 'svelte')
-    },
-
-
-    extensions: ['.mjs', '.js', '.svelte'],
-    mainFields: ['svelte', 'browser', 'module', 'main']
+    extensions: ['.mjs', '.js'],
+    mainFields: ['browser', 'module', 'main']
   },
 
   devServer: {

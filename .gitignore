@@ -60,8 +60,8 @@ typings/
 # Ignore F# specific stuff
 .ionide
 .fable
-src/Motion/bin
-src/Motion/obj
+bin/
+obj/
 
 # Ignore generated files
 dist
