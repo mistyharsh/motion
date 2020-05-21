@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6F437388-2882-44F4-86CD-F51E0B611F59}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Lib", "src\lib\Lib.fsproj", "{0D0DFC73-9465-44CE-B15C-F396E4165551}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Lib", "src\Lib\Lib.fsproj", "{0D0DFC73-9465-44CE-B15C-F396E4165551}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Preact", "src\Preact\Preact.fsproj", "{C75F7C89-505C-4F51-B712-4945E9D42E27}"
 EndProject
