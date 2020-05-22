@@ -1,9 +1,15 @@
-
 namespace App
 
+open Preact
+open Preact.Html
 
 module App =
 
-    let main = 10
+    let document = Browser.Dom.document
 
-    // Browser.Dom.
+    let elm = document.createElement "div"
+    let _ = document.body.appendChild elm
+
+    let AppNode = div [ Id "hello"] [ str "welcome text" ]
+
+    let x = render AppNode elm

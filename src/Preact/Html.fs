@@ -19,19 +19,21 @@ type HtmlAttr =
     | Value of string
 
 
-type VDom =
-    interface end
-
-
 module Html =
 
+    // TODO: Why this doesn't work
+    // [<Import("h", "preact")>]
+    // let private hh: tag: obj * props: obj * [<ParamList>] children: VDom seq -> VDom = jsNative
 
     [<Import("h", "preact")>]
-    let private h: tag: obj * props: obj * [<ParamList>] children: VDom seq -> VDom = jsNative
+    let inline private h (tag: obj) (props: obj) ([<ParamList>] children: VDom seq) : VDom = jsNative
 
-    let private domEl (tag: string) (props: HtmlAttr seq) (children: VDom seq) : VDom = h (tag, keyValueList CaseRules.LowerFirst props, children)
+    let inline private domEl (tag: string) (props: HtmlAttr seq) (children: VDom seq): VDom = h tag (keyValueList CaseRules.LowerFirst props) children
 
-    let private voidEl (tag: string) (props: HtmlAttr seq) : VDom = h (tag, keyValueList CaseRules.LowerFirst props, [])
+    let inline private voidEl (tag: string) (props: HtmlAttr seq) = h tag (keyValueList CaseRules.LowerFirst props) []
+
+    [<Emit("$0")>]
+    let str (text: string) : VDom = jsNative
 
     let inline a props children = domEl "a" props children
     let inline abbr props children = domEl "abbr" props children
