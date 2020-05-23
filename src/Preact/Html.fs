@@ -3,6 +3,7 @@
 open Fable.Core
 open Fable.Core.JsInterop
 
+
 type HtmlAttr =
     | Alt of string
     | Class of string
@@ -18,7 +19,6 @@ type HtmlAttr =
     | Type of string
     | Value of string
 
-
 module Html =
 
     // TODO: Why this doesn't work
@@ -33,7 +33,10 @@ module Html =
     let inline private voidEl (tag: string) (props: HtmlAttr seq) = h tag (keyValueList CaseRules.LowerFirst props) []
 
     [<Emit("$0")>]
-    let str (text: string) : VDom = jsNative
+    let text (text: string) : VDom = jsNative
+
+    [<Emit("null")>]
+    let none : VDom = jsNative
 
     let inline a props children = domEl "a" props children
     let inline abbr props children = domEl "abbr" props children
